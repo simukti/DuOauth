@@ -1,0 +1,44 @@
+<?php
+return array(
+    // dont change this
+    'layout' => 'layout/duoauth-layout',
+    
+    // route name after authentication success / for authenticated user
+    'route_after_success' => 'route-name-to-go-after-auth-success',
+    'route_after_failed'  => 'route-name-to-go-after-auth-failed',
+    
+    // mapper fully-qualified class name to find one user by username,
+    // it MUST implement DuOauth\Mapper\UserFinderInterface
+    'user_mapper'         => '\DuOauth\Mapper\Dummy',
+    
+    // array result from user_mapper result must have this column that contain username to verify
+    'username_columnName' => 'username',
+    
+    'duo' => array(
+        // according to Duo class constant.CHANGE THIS !
+        'akey' => 'THIS_IS_YOUR_SALT_AND_CHAR_40_CHARACTERS',
+        
+        'ikey' => '',
+        'skey' => '', 
+        'host' => ''
+     ),
+    'oauth' => array(
+        'twitter' => array(
+            'consumer_key'    => '',
+            'consumer_secret' => '',
+        )
+    ),
+    // fallback session's config if there's no session started
+    'session' => array(
+        'Name'              => 'duoauth',
+        'SavePath'          => realpath(__DIR__ . '/../data/sessions'),
+        'UseCookies'        => true,
+        'CookiePath'        => '/',
+        //'CookieDomain'      => '',
+        'CookieSecure'      => false,
+        'CookieHttpOnly'    => true,
+        'RememberMeSeconds' => 3600 * 24 * 7,
+        'HashFunction'      => 'gost',
+        'HashBitsPerCharacter' => 6,
+    )
+);

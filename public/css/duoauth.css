@@ -1,0 +1,60 @@
+body.duoauth_body {
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 11px;
+}
+.radius_10 {
+    border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    box-shadow: 0 1px 2px #e0e0e0;
+        -moz-box-shadow: 0 1px 2px #e0e0e0;
+        -webkit-box-shadow: 0 1px 2px #e0e0e0;
+}
+.duoauth {
+    margin-top: 10%;
+}
+.duoauth .login-box {
+    background-color: #fff;
+    margin:0 auto 20px;
+    padding: 0 10px 10px;
+    width: 60%;
+}
+.duoauth h1, 
+.duoauth h2, 
+.duoauth h3, 
+.duoauth p, 
+.duoauth ol li, 
+.duoauth ul li {
+    line-height: 1.8em;
+}
+.duoauth h1 {
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.duoauth p, 
+.duoauth ol, 
+.duoauth ul{
+    font-size: 12px;
+    margin-bottom:0;
+    margin-top:0;
+}
+.duoauth p.right {
+    text-align: right; 
+    margin:20px 0 0;
+}
+.duoauth .footnote p {
+    text-align: center;
+    font-size: 11px;
+}
+.duoauth .footnote p a {
+    color: #dc4321;
+    text-decoration: none;
+}
+.duoauth .footnote p a:hover {
+    text-decoration: underline;
+}

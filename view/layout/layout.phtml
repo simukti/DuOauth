@@ -1,0 +1,30 @@
+<?php echo $this->docType(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('DuOauth')->setDefaultAttachOrder('APPEND')->setSeparator(' - ')->setAutoEscape(true); ?>
+        <?php 
+             $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
+             $this->headMeta()->prependName('author', 'sarjono mukti aji');
+             echo $this->headMeta(); ?>
+        <?php
+        $this->headLink()->prependStylesheet('//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css');
+        $this->headLink()->appendStylesheet($this->url('duoauth-assets', array(
+                'file' => 'duoauth.css'
+            )));
+        echo $this->headLink(); 
+        echo $this->headScript();    ?>
+        
+    </head>
+    <body class="duoauth_body">
+        <div class="container">
+            <div class="row">
+                <div class="span6 offset3">
+                    <div class="duoauth">
+                        <?php echo $this->content; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
