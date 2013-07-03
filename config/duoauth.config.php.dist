@@ -7,6 +7,9 @@ return array(
     'route_after_success' => 'route-name-to-go-after-auth-success',
     'route_after_failed'  => 'route-name-to-go-after-auth-failed',
     
+    // default route of zf2 app is home
+    'route_after_logout'  => 'home',
+    
     // mapper fully-qualified class name to find one user by username,
     // it MUST implement DuOauth\Mapper\UserFinderInterface
     'user_mapper'         => '\DuOauth\Mapper\Dummy',
@@ -15,6 +18,7 @@ return array(
     'username_columnName' => 'username',
     
     'duo' => array(
+        // https://www.duosecurity.com/
         // according to Duo class constant.CHANGE THIS !
         'akey' => 'THIS_IS_YOUR_SALT_AND_CHAR_40_CHARACTERS',
         
@@ -23,6 +27,7 @@ return array(
         'host' => ''
      ),
     'oauth' => array(
+        // https://dev.twitter.com/apps/new
         'twitter' => array(
             'consumer_key'    => '',
             'consumer_secret' => '',

@@ -28,7 +28,8 @@ class Login extends BaseController
     
     public function logoutAction()
     {
-        $auth = $this->getUserService()->getAuthService();
+        $configs = $this->getConfigs();
+        $auth    = $this->getUserService()->getAuthService();
         
         if($auth->hasIdentity()) {
             $auth->clearIdentity();
@@ -40,6 +41,6 @@ class Login extends BaseController
             $sessionManager->destroy();
         }
         
-        return $this->redirect()->toRoute('duoauth-login-index');
+        return $this->redirect()->toRoute($configs['route_after_logout']);
     }
 }
