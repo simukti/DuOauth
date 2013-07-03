@@ -1,5 +1,5 @@
 {
-    "name": "simukti/DuOauth",
+    "name": "simukti/du-oauth",
     "description": "ZF2 module provide user authentication using combination of Twitter OAuth, database checking, and Two-Factor-Authentication (Duo Security).",
     "type": "library",
     "keywords": [
